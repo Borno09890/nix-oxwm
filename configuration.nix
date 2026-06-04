@@ -12,7 +12,7 @@
     systemd-boot.enable = false;
     grub = {
       enable = true;
-      device = "nixos-btw";
+      device = "nodev";
       efiSupport = true;
       useOSProber = true;
     };
@@ -28,13 +28,6 @@
 
   time.timeZone = "Asia/Dhaka";
 
-  i18n.defaultLocale = "en_US.UTF-8";
-  console = {
-    font = "Lat2-Terminus16";
-    keyMap = "us";
-    useXkbConfig = true;
-  };
-
   services.pipewire = {
     enable = true;
     pulse.enable = true;
@@ -42,7 +35,7 @@
 
   services.libinput.enable = true;
 
-  users.users.nix-btw = {
+  users.users.borno = {
     isNormalUser = true;
     extraGroups = ["wheel"];
     packages = with pkgs; [
