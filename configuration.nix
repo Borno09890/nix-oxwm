@@ -62,6 +62,10 @@
     gtk3
     gtk4
     thunar
+    thunar-volman
+    thunar-vcs-plugin
+    thunar-archive-plugin
+    thunar-media-tags-plugin
   ];
 
   programs.mtr.enable = true;
