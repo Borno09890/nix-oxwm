@@ -11,6 +11,6 @@
 
   home.packages = with pkgs; [
     flatpak
-    vscodium
+    zed-editor
   ];
 }
