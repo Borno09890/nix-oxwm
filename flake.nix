@@ -29,11 +29,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.borno = {
-            config,
-            pkgs,
-            ...
-          }: {
+          home-manager.users.borno = {pkgs, ...}: {
             imports = [
               inputs.lazyvim.homeManagerModules.default # ← Move import here
               ./home.nix
