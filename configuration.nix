@@ -28,6 +28,14 @@
 
   time.timeZone = "Asia/Dhaka";
 
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+      vpl-gpu-rt
+    ];
+  };
+
   services.pipewire = {
     enable = true;
     pulse.enable = true;
