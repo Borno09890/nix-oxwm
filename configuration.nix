@@ -76,7 +76,7 @@
   };
 
   nix = {
-    package = pkgs.nixFlakes;
+    package = pkgs.nix;
     settings = {
       experimental-features = ["nix-command" "flakes"];
     };

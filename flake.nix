@@ -13,12 +13,11 @@
   outputs = inputs @ {
     self,
     nixpkgs,
-    pkgs,
     home-manager,
     lazyvim,
     ...
   }: let
-    system = "x8664-linux";
+    system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system}; # ← ADD THIS
   in {
     nixosConfigurations.borno = nixpkgs.lib.nixosSystem {
@@ -43,7 +42,7 @@
               enable = true;
               extras = {
                 lang.nix.enable = true;
-                lang.lua.enable = true;
+                # lang.lua.enable = true;
                 lang.json.enable = true;
               };
               extraPackages = with pkgs; [
