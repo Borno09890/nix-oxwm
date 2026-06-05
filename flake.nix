@@ -18,7 +18,7 @@
     ...
   }: let
     system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system}; # ← ADD THIS
+    pkgs = nixpkgs.legacyPackages.${system};
   in {
     nixosConfigurations.borno = nixpkgs.lib.nixosSystem {
       inherit system;
@@ -35,7 +35,7 @@
             ...
           }: {
             imports = [
-              inputs.lazyvim.homeManagerModules.default # ← Move import here
+              inputs.lazyvim.homeManagerModules.default
               ./home.nix
             ];
             programs.lazyvim = {
