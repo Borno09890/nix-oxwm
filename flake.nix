@@ -36,6 +36,7 @@
           home-manager.users.borno = {
             config,
             pkgs,
+            nix-flatpak,
             ...
           }: {
             imports = [
