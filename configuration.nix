@@ -34,12 +34,19 @@
 
   hardware.graphics = {
     enable = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       intel-media-driver
-          intel-media-driver
     libvdpau-va-gl
     xf86-video-vesa
-    mesa    
+    mesa       
+    intel-vaapi-driver       # For older Intel GPUs (pre-Broadwell)
+    vaapiVdpau
+    libvdpau-va-gl
+    vulkan-loader
+    vulkan-validation-layers
+    vulkan-extension-layer
+    intel-compute-runtime    
     ];
   };
 
@@ -96,6 +103,8 @@
     mako
     wl-clipboard
     noctalia-shell
+      vulkan-tools     
+  mesa-demos       
   ];
 
   programs.mtr.enable = true;
