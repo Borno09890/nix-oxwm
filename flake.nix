@@ -36,13 +36,11 @@
           home-manager.users.borno = {
             config,
             pkgs,
-            nix-flatpak,
             ...
           }: {
             imports = [
               inputs.lazyvim.homeManagerModules.default
               ./home.nix
-              "${nix-flatpak}/modules/nixos.nix"
             ];
             programs.lazyvim = {
               enable = true;
