@@ -39,9 +39,7 @@
           intel-media-driver
     libvdpau-va-gl
     xf86-video-vesa
-    mesa
-    vulkan-intel
-     
+    mesa    
     ];
   };
 
