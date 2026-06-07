@@ -95,6 +95,7 @@
     networkmanagerapplet
     mako
     wl-clipboard
+    noctalia-shell
   ];
 
   programs.mtr.enable = true;
