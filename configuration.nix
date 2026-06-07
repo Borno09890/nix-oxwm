@@ -21,7 +21,8 @@
   };
 
   hardware.opengl.enable = true;
-
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "borno";
