@@ -40,8 +40,7 @@
     libvdpau-va-gl
     xf86-video-vesa
     mesa       
-    intel-vaapi-driver       # For older Intel GPUs (pre-Broadwell)
-    vaapiVdpau
+    intel-vaapi-driver       
     libvdpau-va-gl
     vulkan-loader
     vulkan-validation-layers
