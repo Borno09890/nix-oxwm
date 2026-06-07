@@ -21,8 +21,6 @@
   };
 
   hardware.opengl.enable = true;
-  hardware.opengl.driSupport = true;
-  
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
