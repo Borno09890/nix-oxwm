@@ -121,7 +121,7 @@ services.flatpak = {
   ];
   overrides = {
     "org.vinegarhq.Sober" = {
-      Context.sockets = ["wayland" "!x11"];
+      Context.sockets = ["x11" "fallback-x11"];
     };
   };
   remotes = [
