@@ -114,15 +114,27 @@
   };
   services.displayManager.ly.enable = true;
 
-    services.flatpak = {
-    enable = true;
-    packages = [
-      "org.vinegarhq.Sober"
-    ];
+services.flatpak = {
+  enable = true;
+  packages = [
+    "org.vinegarhq.Sober"
+  ];
+  overrides = {
+    "org.vinegarhq.Sober" = {
+      Context.sockets = ["wayland" "!x11"];
+    };
   };
-  services.flatpak.remotes = [{
-  name = "flathub-beta"; location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
-}];
+  remotes = [
+    {
+      name = "flathub";
+      location = "https://flathub.org/repo/flathub.flatpakrepo";
+    }
+    {
+      name = "flathub-beta";
+      location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+    }
+  ];
+};
   services.openssh.enable = true;
   system.stateVersion = "25.11";
 }
