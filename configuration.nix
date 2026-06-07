@@ -93,6 +93,8 @@
     pavucontrol
     blueman
     networkmanagerapplet
+    mako
+    wl-clipboard
   ];
 
   programs.mtr.enable = true;
@@ -112,12 +114,18 @@
     xkb.layout = "us";
     xkb.variant = "";
     videoDrivers = [ "modesetting" ];
+    libinput.enable = true;
 
     windowManager.oxwm.enable = true;
     windowManager.i3.enable = true;
     # displayManager.defaultSession = "oxwm+i3";
   };
   services.displayManager.ly.enable = true;
+    programs.sway = {
+    enable = true;
+    wrapperFeatures.gtk = true;
+  };
+ services.gnome.gnome-keyring.enable = true;
 
 services.flatpak = {
   enable = true;
