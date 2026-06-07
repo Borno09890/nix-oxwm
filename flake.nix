@@ -5,6 +5,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
     lazyvim = {
       url = "github:pfassina/lazyvim-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -15,6 +16,7 @@
     nixpkgs,
     home-manager,
     lazyvim,
+    nix-flatpak,
     ...
   }: let
     system = "x86_64-linux";
@@ -26,6 +28,7 @@
       modules = [
         ./configuration.nix
         home-manager.nixosModules.home-manager
+        nix-flatpak.nixosModules.nix-flatpak
         ./hardware-configuration.nix
         {
           home-manager.useGlobalPkgs = true;
@@ -38,6 +41,7 @@
             imports = [
               inputs.lazyvim.homeManagerModules.default
               ./home.nix
+              "${nix-flatpak}/modules/nixos.nix"
             ];
             programs.lazyvim = {
               enable = true;

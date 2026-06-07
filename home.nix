@@ -10,7 +10,6 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    flatpak
     vscodium
     alacritty
     picom

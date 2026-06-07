@@ -117,6 +117,15 @@
   };
   services.displayManager.ly.enable = true;
 
+    services.flatpak = {
+    enable = true;
+    packages = [
+      "org.vinegarhq.Sober"
+    ];
+  };
+  services.flatpak.remotes = [{
+  name = "flathub-beta"; location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+}];
   services.openssh.enable = true;
   system.stateVersion = "25.11";
 }
