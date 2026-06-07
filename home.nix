@@ -11,6 +11,9 @@
 
   home.packages = with pkgs; [
     flatpak
-    zed-editor
+    vscodium
+    alacritty
+    picom
+    wl-clipboard
   ];
 }

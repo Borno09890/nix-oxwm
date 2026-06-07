@@ -58,6 +58,7 @@
     vimPlugins.LazyVim
     nixd
     foot
+    brave
     rofi
     alejandra
     gtk3
@@ -67,6 +68,7 @@
     thunar-vcs-plugin
     thunar-archive-plugin
     thunar-media-tags-plugin
+    ntfs3g
   ];
 
   programs.mtr.enable = true;
@@ -92,5 +94,5 @@
   services.displayManager.ly.enable = true;
 
   services.openssh.enable = true;
-  system.stateVersion = "26.05";
+  system.stateVersion = "25.11";
 }

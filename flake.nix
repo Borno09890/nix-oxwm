@@ -26,6 +26,7 @@
       modules = [
         ./configuration.nix
         home-manager.nixosModules.home-manager
+        ./hardware-configuration.nix
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
