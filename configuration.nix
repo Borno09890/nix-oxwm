@@ -20,6 +20,10 @@
     efi.efiSysMountPoint = "/boot";
   };
 
+  hardware.opengl.enable = true;
+  hardware.opengl.driSupport = true;
+  
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   networking.hostName = "borno";
@@ -27,12 +31,18 @@
   networking.networkmanager.enable = true;
 
   time.timeZone = "Asia/Dhaka";
+   
 
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
       intel-media-driver
-      vpl-gpu-rt
+          intel-media-driver
+    libvdpau-va-gl
+    xf86-video-vesa
+    mesa
+    vulkan-intel
+     
     ];
   };
 
@@ -69,6 +79,19 @@
     thunar-archive-plugin
     thunar-media-tags-plugin
     ntfs3g
+    feh
+    xwallpaper
+    nitrogen
+    brightnessctl
+    dunst
+    flameshot
+    xclip
+    polybar
+    i3lock
+    fontconfig
+    pavucontrol
+    blueman
+    networkmanagerapplet
   ];
 
   programs.mtr.enable = true;
@@ -87,6 +110,7 @@
     enable = true;
     xkb.layout = "us";
     xkb.variant = "";
+    videoDrivers = [ "modesetting" ];
 
     windowManager.oxwm.enable = true;
     displayManager.defaultSession = "none+oxwm";
