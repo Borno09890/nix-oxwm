@@ -110,7 +110,8 @@
     videoDrivers = [ "modesetting" ];
 
     windowManager.oxwm.enable = true;
-    displayManager.defaultSession = "none+oxwm";
+    windowsMnager.i3.enable = true;
+    displayManager.defaultSession = "oxwm+i3";
   };
   services.displayManager.ly.enable = true;
 
