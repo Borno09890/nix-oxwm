@@ -84,6 +84,10 @@
     flameshot
     xclip
     polybar
+    acpid
+    networkmanager
+    trayer
+    libinput
     i3lock
     fontconfig
     pavucontrol
